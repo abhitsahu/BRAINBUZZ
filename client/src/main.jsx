@@ -12,12 +12,18 @@ export const store = configureStore({
   reducer: rootReducer,
 })
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+const root = ReactDOM.createRoot(document.getElementById('root'))
+root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter
+      future={{
+        v7_startTransition: true,
+        v7_relativeSplatPath: true
+      }}
+    >
       <Provider store={store}>
-      <Toaster />
-      <App />
+        <Toaster />
+        <App />
       </Provider>
     </BrowserRouter>
   </React.StrictMode>
