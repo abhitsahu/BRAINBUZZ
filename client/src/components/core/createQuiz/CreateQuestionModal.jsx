@@ -34,7 +34,7 @@ const CreateQuestionModal = ({ quiz, setQuestions, setCreateQuestionModalData })
       }
 
     } catch (e) {
-      console.log("ERROR WHILE CREATING THE QUESTION:", e);
+      // console.log("ERROR WHILE CREATING THE QUESTION:", e);
       toast.error("Question cannot be created");
     } finally {
       setLoading(false)

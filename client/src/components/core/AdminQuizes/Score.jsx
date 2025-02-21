@@ -19,7 +19,7 @@ const Score = ({ quiz }) => {
                 // console.log("res : ", response)
                 setScores(response?.data?.data)
             } catch (error) {
-                console.log("error : ", error)
+                // console.log("error : ", error)
             } finally {
                 setLoading(false)
             }

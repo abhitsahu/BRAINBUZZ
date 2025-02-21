@@ -18,7 +18,7 @@ const History = () => {
         Authorization: `Bearer ${token}`
       })
 
-      console.log("response : ", response)
+      //console.log("response : ", response)
       if (!response.data.success) {
         throw new Error(response.data.error)
       }
@@ -26,7 +26,7 @@ const History = () => {
       setAttempts(response?.data?.data)
 
     } catch (e) {
-      console.log("Failed to get User Attempts")
+      //console.log("Failed to get User Attempts")
       toast.success("Failed to get User Attempts")
     } finally {
       setLoading(false)

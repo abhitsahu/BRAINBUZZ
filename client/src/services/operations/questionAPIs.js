@@ -18,11 +18,11 @@ export const createQuestion = async (data, token) => {
       throw new Error(response.data.error);
     }
 
-    console.log("CREATE QUESTION API RESPONSE : ", response);
+    //console.log("CREATE QUESTION API RESPONSE : ", response);
 
     return response.data.data;
   } catch (error) {
-    console.log("Error while creating question", error);
+    //console.log("Error while creating question", error);
     toast.error("Error while creating question");
   }
   return null;
@@ -43,11 +43,11 @@ export const deleteQuestion = async (questionId, token) => {
       throw new Error(response.data.error);
     }
 
-    console.log("DELETE QUESTION API RESPONSE : ", response);
+    //console.log("DELETE QUESTION API RESPONSE : ", response);
 
     return true
   } catch (error) {
-    console.log("Error while deleting question", error);
+    //console.log("Error while deleting question", error);
     toast.error("Error while deleting question");
   }
   return false;

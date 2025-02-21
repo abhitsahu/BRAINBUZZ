@@ -25,11 +25,11 @@ const AttemptQuiz = () => {
                 Authorization: `Bearer ${token}`
             })
 
-            // console.log("QUIZ QUESTIONS RESPONSE : ", response)
+            // //console.log("QUIZ QUESTIONS RESPONSE : ", response)
 
             setQuisQuestions(response?.data?.data);
         } catch (error) {
-            console.log('Error fetching quiz details:', error);
+            //console.log('Error fetching quiz details:', error);
         } finally {
             setQuestionsLoading(false);
         }
@@ -42,11 +42,11 @@ const AttemptQuiz = () => {
                 Authorization: `Bearer ${token}`
             })
 
-            console.log("QUIZ DETAILS RESPONSE : ", response)
+            //console.log("QUIZ DETAILS RESPONSE : ", response)
 
             setQuizDetails(response?.data?.data);
         } catch (error) {
-            console.log('Error fetching quiz details:', error);
+            //console.log('Error fetching quiz details:', error);
         } finally {
             setDetailsLoading(false);
         }

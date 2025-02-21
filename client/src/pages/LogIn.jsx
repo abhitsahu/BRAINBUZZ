@@ -27,7 +27,7 @@ const LogIn = () => {
         navigate("/dashboard")
       }
     } catch (e) {
-      console.log("ERROR WHILE SINGING UP : ", e);
+      ////console.log("ERROR WHILE SINGING UP : ", e);
     } finally {
       setLoading(false)
       toast.dismiss(toastId)

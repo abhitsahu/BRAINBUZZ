@@ -49,7 +49,7 @@ const CreateQuiz = () => {
         throw new Error("Quiz cannot be created at this moment")
       }
     } catch (e) {
-      console.log(e);
+      //console.log(e);
       toast.error("Quiz cannot be created at this moment")
     } finally {
       setLoading(false);

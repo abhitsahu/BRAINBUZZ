@@ -36,7 +36,7 @@ const CreateQuestions = () => {
                 setQuestions(prevQuestions => prevQuestions.filter(q => q._id !== question._id))
             }
         } catch (e) {
-            console.log("ERRO DELETING QUESTION : ", e);
+            //console.log("ERRO DELETING QUESTION : ", e);
         }
     }
 
@@ -46,12 +46,12 @@ const CreateQuestions = () => {
             const response = await apiConnector("GET", `${questionEndpoints.GET_QUIZ_QUESTIONS}/${id}`, null, {
                 Authorization: `Bearer ${token}`
             })
-            // console.log("response : ", response)
+            // //console.log("response : ", response)
             if (response) {
                 setQuestions(response?.data?.data);
             }
         } catch (error) {
-            console.log("ERROR FETCHING QUIZ QUESTIONS : ", error);
+            //console.log("ERROR FETCHING QUIZ QUESTIONS : ", error);
         } finally {
             setLoading(false)
         }

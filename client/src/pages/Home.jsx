@@ -24,7 +24,7 @@ const Home = () => {
       setQuizzes(response.data.data);
 
     } catch (e) {
-      console.log("COULDNT GET QUIZZES")
+      //console.log("COULDNT GET QUIZZES")
     } finally {
       setLoading(false)
     }

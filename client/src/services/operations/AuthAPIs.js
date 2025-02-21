@@ -13,12 +13,12 @@ export const signUp = async (data) => {
       throw new Error(response?.data?.error);
     }
 
-    console.log("SIGNUP RESPONSE : ", response);
+    //console.log("SIGNUP RESPONSE : ", response);
 
     toast.success("Signed Up Successfully");
     return true;
   } catch (e) {
-    console.log("ERROR WHILE SINGING UP : ", e);
+    //console.log("ERROR WHILE SINGING UP : ", e);
     toast.error(e?.response?.data?.error);
   }
   return false;
@@ -32,7 +32,7 @@ export const login = async (data, dispatch) => {
       throw new Error(response?.data?.error);
     }
 
-    console.log("LOGIN RESPONSE : ", response);
+    //console.log("LOGIN RESPONSE : ", response);
 
     localStorage.setItem("token", response?.data?.data?.token);
     localStorage.setItem("user", JSON.stringify(response?.data?.data?.user));
@@ -42,7 +42,7 @@ export const login = async (data, dispatch) => {
     toast.success("Logged In Successfully");
     return true;
   } catch (e) {
-    console.log("ERROR WHILE LOGGING IN : ", e);
+    //console.log("ERROR WHILE LOGGING IN : ", e);
     toast.error(e.response.data.error);
   }
   return false;
@@ -58,7 +58,7 @@ export const logout = async (dispatch, navigate) => {
     navigate("/login")
     return true;
   } catch (e) {
-    console.log("ERROR WHILE LOGGING OUT : ", e);
+    //console.log("ERROR WHILE LOGGING OUT : ", e);
     toast.error("Logout failed");
   }
   return false;

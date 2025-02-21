@@ -21,7 +21,7 @@ const AdminQuizes = () => {
             }
 
         } catch (e) {
-            console.log("ERROR DELETING QUIZ : ", e);
+            //console.log("ERROR DELETING QUIZ : ", e);
         } finally {
             setLoading(false);
         }
