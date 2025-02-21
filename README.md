@@ -1,3 +1,9 @@
+### Deployed App Link
+ ```sh
+     https://brainbuzz-omega.vercel.app/
+   ```
+
+
 ### Backend Setup
 1. Clone the repository:
    ```sh
